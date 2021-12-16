@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Assistant:wght@800&family=Montserrat&display=swap');
+@import "variables.scss";
+@import "mixins.scss";
+
+* {
+  box-sizing: border-box;
+  transition: all 0.35s ease;
+}
+
+html, body {
+  scroll-behavior: smooth;
+}
+
+::moz-selection {
+  color: $textcolor;
+  background-color: $primary;
+}
+::selection {
+  color: $textcolor;
+  background-color: $primary;
+}
+
+#app {
+  font-family: 'Montserrat', sans-serif;
+  font-family: 'Roboto', sans-serif;
+  background-color: $background;
+  color: $textcolor;
+  min-height: 100vh;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+h1, h2, h3 {
+  font-family: 'Assistant', sans-serif;
+  text-transform: uppercase;
+  color: $primary;
+}
+
+.fade-in {
+  animation: section-fade-in 0.35s ease;
+}
+
+@keyframes section-fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
